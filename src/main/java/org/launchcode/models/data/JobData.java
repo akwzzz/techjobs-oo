@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public class JobData {
 
-    private ArrayList<Job> jobs = new ArrayList<>();
+    private static ArrayList<Job> jobs = new ArrayList<>();
     private static JobData instance;
 
     private JobFieldData<Employer> employers = new JobFieldData<>();
@@ -30,7 +30,10 @@ public class JobData {
         return instance;
     }
 
-    public Job findById(int id) {
+
+
+
+    public static Job findById(int id) {
         for (Job job : jobs) {
             if (job.getId() == id)
                 return job;
